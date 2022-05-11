@@ -17,7 +17,7 @@ server.use(express.static(path.join(__dirname, '../public')))
 server.use(MainRoutes)
 
 server.use((req, res) => {
-    res.send("Pagina 404")
+    res.render("pages/404")
 })
 
 server.listen(process.env.PORT)

@@ -1,0 +1,24 @@
+{{>partials/header}}
+
+{{#title}}
+    <section class="banner" style="background-image: url('images/{{bgImage}}')">{{title}}</section>
+    <h2>{{title}} disponíveis para adoção</h2>
+{{/title}}
+
+<div class="container list">
+    {{#types}}
+        <div class="item">
+            <img src="images/{{image}}" class="item--image" />
+            <div class="item--name">{{name}}</div>
+            <div class="item--color">Cor: {{color}}</div>
+            <div class="item--genre">Gênero: {{sex}}</div>
+        </div>
+    {{/types}}
+</div>
+    {{^types}}
+        <div class="container no-list">
+            <h2 class="item-no-list">Nenhum item encontrado</h2>
+        </div>
+    {{/types}}
+
+{{>partials/footer}}
